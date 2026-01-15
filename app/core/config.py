@@ -13,6 +13,13 @@ class Settings(BaseSettings):
     CELERY_BROKER_URL: str
     CELERY_RESULT_BACKEND: str
 
+    SMTP_SERVER: str = "smtp.gmail.com"
+    SMTP_PORT: int = 587
+    SMTP_USER: Optional[str] = None
+    SMTP_PASSWORD: Optional[str] = None
+    EMAILS_FROM_EMAIL: Optional[str] = "notifications@example.com"
+    EMAILS_FROM_NAME: Optional[str] = "Notification Service"
+
     # Slack Settings
     # We might not need global slack settings if we pass webhook_url in the
     # payload, but it's good to have a default fallback or for admin alerts.

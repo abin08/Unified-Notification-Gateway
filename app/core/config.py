@@ -25,6 +25,9 @@ class Settings(BaseSettings):
     # payload, but it's good to have a default fallback or for admin alerts.
     DEFAULT_SLACK_WEBHOOK: Optional[str] = None
 
+    HTTP_PROXY: Optional[str] = None
+    HTTPS_PROXY: Optional[str] = None
+
     # Pydantic Configuration
     # This tells Pydantic to read from a local .env file
     model_config = SettingsConfigDict(

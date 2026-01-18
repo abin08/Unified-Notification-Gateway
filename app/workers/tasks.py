@@ -12,7 +12,7 @@ def send_notification_task(notification_data: dict):
 
     This task deserializes the raw dictionary payload into a Pydantic model,
     selects the appropriate notifier via the Factory and sends the message.
-    It is designed to be idempotent and retried automatically by Celery on 
+    It is designed to be idempotent and retried automatically by Celery on
     failure.
 
     Args:

@@ -45,3 +45,9 @@ class EmailNotification(BaseModel):
 
 
 NotificationRequest = Union[SlackNotification, EmailNotification]
+
+
+class NotifyResponse(BaseModel):
+    status: str = "queued"
+    request_id: str
+    message: str
